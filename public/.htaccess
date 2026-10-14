@@ -1,0 +1,6 @@
+# Don't list folders: visitors must know the access code (folder name).
+Options -Indexes
+# Keep designs out of search engines.
+<IfModule mod_headers.c>
+  Header set X-Robots-Tag "noindex, nofollow"
+</IfModule>

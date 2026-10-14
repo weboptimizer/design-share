@@ -1,0 +1,6 @@
+.env
+.DS_Store
+node_modules/
+# Real client designs: keep them out of git.
+public/*/
+!public/example-access-code/
