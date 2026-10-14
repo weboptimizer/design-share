@@ -1,8 +1,8 @@
 # design-share
 
-A small, static way to share designs with clients that looks good and stays private.
+A small, static way to share designs with clients that looks good and stays private. Each design is usually a working HTML prototype that clients can click through, not a static image.
 
-It's the code behind [design.weboptimizer.agency](https://design.weboptimizer.agency): a branded holding page with an access code field. Each client gets a code; the code opens their design. No code, no design.
+It's the code behind [design.weboptimizer.agency](https://design.weboptimizer.agency): a branded holding page with an access code field. Each client gets a code; the code opens their design, a clickable prototype in the browser. No code, no design.
 
 ## The problem
 
@@ -11,6 +11,7 @@ I needed to share designs with clients in a beautiful and private way. Emailing 
 ## Features
 
 - Branded holding page ("Design, in progress") with an access code field and a call-to-action link.
+- Share working, clickable HTML prototypes, not screenshots or PDFs: clients click through the real thing in their browser.
 - Each design lives in its own folder; the folder name is the access code (`/your-code/`).
 - Pure static HTML, CSS and a few lines of JavaScript. No build step, no database, no server code.
 - Works with self-contained single-file HTML designs (fonts and assets bundled in).
@@ -42,7 +43,7 @@ The access code is a hard-to-guess folder name, not a password. Use long, random
 
 ## Usage: sharing a design
 
-1. Export your design as a self-contained HTML file (`index.html`, with assets inlined or alongside it).
+1. Export your design as a working HTML prototype: a self-contained `index.html`, with assets inlined or alongside it. Links and interactions keep working, so clients can click through it.
 2. Pick a long, random access code, e.g. `acme-7f3k9q`.
 3. Create `public/<code>/` and put the design inside it.
 4. Upload the folder to your server and send the client the link and their code.
